@@ -1,0 +1,14 @@
+.input-group {
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.input-group button {
+  transition: background-color 0.3s;
+}
+.input-group:hover {
+  padding: 10px 0px 5px 0px;
+}
+
+#docsButton {
+  margin-left: 1vw;
+}

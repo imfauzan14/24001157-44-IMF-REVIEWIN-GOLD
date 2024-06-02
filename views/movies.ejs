@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/results.css" />
+  </head>
+  <body class="p-4 bg-gradient">
+    <div class="container-fluid">
+      <div class="row">
+        <a
+          href="/"
+          class="col-md-auto btn btn-secondary mb-3"
+          style="margin: 0vh 0.5vw 0vh 0.5vw"
+          >Back to Search</a
+        >
+        <h1 class="col text-end mb-4 fs-4">Search Results</h1>
+      </div>
+      <div class="row row-cols-2 row-cols-md-6 g-4">
+        <% if (movies.length > 0) { %> <% movies.forEach(movie => { %>
+        <div class="col">
+          <div class="movieCatalogue position-relative overflow-hidden">
+            <% if (movie.poster_path) { %>
+            <img
+              class="movieImage img-fluid rounded"
+              src="https://image.tmdb.org/t/p/w300<%= movie.poster_path %>"
+              alt="<%= movie.title %>"
+            />
+            <% } else { %>
+            <img
+              class="movieImage img-fluid rounded"
+              src="/images/poster-placeholder.png"
+              alt="<%= movie.title %>"
+            />
+            <% } %>
+            <a href="/movie/<%= movie.id %>">
+              <div
+                class="overlay d-flex align-items-center justify-content-center"
+              >
+                <h2 class="fs-5 text-center">
+                  <%= movie.title %> <% if (movie.release_date) { %><br />(<%=
+                  (new Date(movie.release_date)).getFullYear() %>)<% } %>
+                </h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <% }) %> <% } else { %>
+        <div class="position-absolute top-50 start-50 translate-middle">
+          <h2 class="text-uppercase fw-bold text-center">No Results Found</h2>
+          <p class="lead My-3 text-center">
+            Sorry, we couldn't find any movies that match your search criteria.
+            Please try again with different keywords.
+          </p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

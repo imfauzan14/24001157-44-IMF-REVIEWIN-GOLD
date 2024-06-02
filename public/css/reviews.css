@@ -1,0 +1,41 @@
+body {
+  margin: 2.9vh 2vw 0vh 2vw;
+}
+
+#backButton {
+  margin: 0vh 3vw 0vh 4vw;
+}
+
+#movieColumn {
+  margin: 1vh 1vw 1vh 1vw;
+  border-right: 1px solid #000;
+  padding-right: 3vh;
+}
+
+#movieColumn img {
+  max-height: 512px;
+  max-width: 341px;
+  margin-bottom: 3vh;
+}
+
+#reviewsColumn {
+  margin: 0vh 1vw 0vh 0vw;
+}
+
+#reviewsColumn #createReview {
+  margin-bottom: 2vh;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3vh;
+}
+
+#reviewsColumn #reviewsList button {
+  margin-bottom: 3vh;
+}
+
+#reviewsColumn #reviewsList .form-label {
+  margin-top: 1vh;
+}
+
+#movieColumn .row h2 {
+  margin-bottom: 2vh;
+}

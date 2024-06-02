@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>review-in API Docs</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+      hljs.configure({
+        tabReplace: "    ",
+      });
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link rel="stylesheet" href="/css/apiDocs.css" />
+  </head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <div id="sidebar-wrapper">
+      <div class="scrollspy">
+        <ul id="main-menu" data-spy="affix" class="nav">
+          <div class="text-center" id="backButton">
+            <a href="/" class="btn btn-default">Back to Search</a>
+          </div>
+          <li>
+            <a href="#request-get-movie-reviews">GET Movie Reviews</a>
+          </li>
+
+          <li>
+            <a href="#request-post-review">POST Review</a>
+          </li>
+
+          <li>
+            <a href="#request-delete-review">DELETE Review</a>
+          </li>
+
+          <li>
+            <a href="#request-patch-review-rating">PATCH Review Rating</a>
+          </li>
+
+          <li>
+            <a href="#request-get-movies">GET Movies</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="request">
+              <h3 id="request-get-movie-reviews">
+                GET Movie Reviews
+                <a href="#request-get-movie-reviews"
+                  ><i class="glyphicon glyphicon-link"></i
+                ></a>
+              </h3>
+
+              <div>
+                <p>
+                  To get review(s) of the requested movieId from the database
+                </p>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-get-movie-reviews-example-curl"
+                      data-toggle="tab"
+                      >Curl</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-get-movie-reviews-example-curl"
+                  >
+                    <pre><code class="hljs curl">curl -X GET "{{host}}:{{port}}/api/movie/{{movieId}}/review"</code></pre>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-get-movie-reviews-responses-42919777-2757-4170-978c-2df89852949d"
+                      data-toggle="tab"
+                    >
+                      Found
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-get-movie-reviews-responses-74e97c40-9c46-4111-a3df-6cb54bc92e2d"
+                      data-toggle="tab"
+                    >
+                      Not Found
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-get-movie-reviews-responses-c4b2e7e4-9926-4bcd-a503-6304ae28142e"
+                      data-toggle="tab"
+                    >
+                      Invalid params
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-get-movie-reviews-responses-42919777-2757-4170-978c-2df89852949d"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>200 OK</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>107</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"6b-GjA0Ul9i4qNft5gNviUJs62ud8w"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 11:08:53 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>[
+      {
+          "reviewId": 1,
+          "movieId": 557,
+          "reviewText": "What a great movie!",
+          "reviewRating": 5,
+          "createdAt": "2024-05-31T03:41:04.144Z"
+      }
+  ]</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-get-movie-reviews-responses-74e97c40-9c46-4111-a3df-6cb54bc92e2d"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>404 Not Found</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>27</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"1b-iCuVr+Um3TUDOLA0WmU8aA/M+fY"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 16:02:12 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "no review found"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-get-movie-reviews-responses-c4b2e7e4-9926-4bcd-a503-6304ae28142e"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>400 Bad Request</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>45</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"2d-oM/CIWnsKxsyT6FPzihAAyqUsRc"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 15:22:09 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "Failed to fetch movie and reviews"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+            </div>
+
+            <div class="request">
+              <h3 id="request-post-review">
+                POST Review
+                <a href="#request-post-review"
+                  ><i class="glyphicon glyphicon-link"></i
+                ></a>
+              </h3>
+
+              <div><p>To post a review of movieId to the database</p></div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-post-review-example-curl"
+                      data-toggle="tab"
+                      >Curl</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-post-review-example-curl"
+                  >
+                    <pre><code class="hljs curl">curl -X POST -d '{
+      "reviewText": "What a great movie!",
+      "reviewRating": 5
+  }' "{{host}}:{{port}}/api/movie/{{movieId}}/review"</code></pre>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-post-review-responses-f3614e3e-50bf-4b4f-b379-f28fdf8b5673"
+                      data-toggle="tab"
+                    >
+                      Success
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-post-review-responses-9abc730a-b18b-462f-adef-2a2645ee75e5"
+                      data-toggle="tab"
+                    >
+                      Invalid body
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-post-review-responses-11491bd1-f210-47e5-bb11-724101fa3c1a"
+                      data-toggle="tab"
+                    >
+                      Invalid params
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-post-review-responses-f3614e3e-50bf-4b4f-b379-f28fdf8b5673"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>200 OK</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>53</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"35-KXCkrmjCrTgr8l5sWdsJcDfDAY4"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 11:49:24 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "reviewText": "What a great movie!",
+      "reviewRating": 5
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-post-review-responses-9abc730a-b18b-462f-adef-2a2645ee75e5"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>400 Bad Request</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>82</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"52-fOfXHoGz36Dd/xAfX7F06l5VZ6M"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Sun, 02 Jun 2024 04:05:10 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "movieId, reviewRating(int 1-5) and reviewText(str 255 max) is required"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-post-review-responses-11491bd1-f210-47e5-bb11-724101fa3c1a"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>404 Not Found</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>34</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"22-P1QxaVSp+4h6LrgnXvBRqC4HxOI"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 15:33:27 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "movieId can't be found"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+            </div>
+
+            <div class="request">
+              <h3 id="request-delete-review">
+                DELETE Review
+                <a href="#request-delete-review"
+                  ><i class="glyphicon glyphicon-link"></i
+                ></a>
+              </h3>
+
+              <div><p>To delete a review from the databse</p></div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-delete-review-example-curl"
+                      data-toggle="tab"
+                      >Curl</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-delete-review-example-curl"
+                  >
+                    <pre><code class="hljs curl">curl -X DELETE "{{host}}:{{port}}/api/movie/{{movieId}}/review/{{reviewId}}"</code></pre>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-delete-review-responses-432418e9-fd52-43a3-9665-08f8c6daa0f6"
+                      data-toggle="tab"
+                    >
+                      Success
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-delete-review-responses-882fdb15-59a1-4e49-ae0d-ad71199f867d"
+                      data-toggle="tab"
+                    >
+                      Invalid params
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-delete-review-responses-432418e9-fd52-43a3-9665-08f8c6daa0f6"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>200 OK</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>45</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"2d-zw+MBW001eDgVS167s3hfuymNJw"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 15:38:57 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "message": "Succesfully deleted reviewId: 8"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-delete-review-responses-882fdb15-59a1-4e49-ae0d-ad71199f867d"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>404 Not Found</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>53</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"35-6kPBKGzdauA1NquvDpo2Mz9Irps"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 15:39:50 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "either movieId or reviewId can't be found"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+            </div>
+
+            <div class="request">
+              <h3 id="request-patch-review-rating">
+                PATCH Review Rating
+                <a href="#request-patch-review-rating"
+                  ><i class="glyphicon glyphicon-link"></i
+                ></a>
+              </h3>
+
+              <div>
+                <p>To update the rating of the review inside the database</p>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-patch-review-rating-example-curl"
+                      data-toggle="tab"
+                      >Curl</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-patch-review-rating-example-curl"
+                  >
+                    <pre><code class="hljs curl">curl -X PATCH -d '{
+      "reviewRafting": 5
+  }' "{{host}}:{{port}}/api/movie/{{movieId}}/review/{{reviewId}}"</code></pre>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-patch-review-rating-responses-074e3562-cea7-473c-9ef8-c285b5f63375"
+                      data-toggle="tab"
+                    >
+                      Success
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-patch-review-rating-responses-2154ff3c-559a-4fdf-88c7-d17313f26b32"
+                      data-toggle="tab"
+                    >
+                      Invalid body
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-patch-review-rating-responses-32a727aa-8b35-40a8-aecb-b9b6d1ba5880"
+                      data-toggle="tab"
+                    >
+                      Invalid params
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-patch-review-rating-responses-074e3562-cea7-473c-9ef8-c285b5f63375"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>200 OK</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>48</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"30-u2tWs7zH0ewvF1WaYovVTsVXkJ4"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 12:45:26 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "message": "reviewRating updated successfully"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-patch-review-rating-responses-2154ff3c-559a-4fdf-88c7-d17313f26b32"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>400 Bad Request</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>36</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"24-dXq5abtQVJ9BEz3PIQuGDzfAsPM"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 15:41:07 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "reviewRating is required and must be within 1 - 5 range"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-patch-review-rating-responses-32a727aa-8b35-40a8-aecb-b9b6d1ba5880"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>404 Not Found</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>53</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"35-6kPBKGzdauA1NquvDpo2Mz9Irps"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 15:41:36 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "error": "either movieId or reviewId can't be found"
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+            </div>
+
+            <div class="request">
+              <h3 id="request-get-movies">
+                GET Movies
+                <a href="#request-get-movies"
+                  ><i class="glyphicon glyphicon-link"></i
+                ></a>
+              </h3>
+
+              <div>
+                <p>To search movies by using a keyword</p>
+
+                <p>
+                  <em
+                    >Notes: This API is placed at the bottom since it actually
+                    use external API which the data are taken directly from</em
+                  >
+                  <a
+                    href="https://developer.themoviedb.org/reference/search-movie"
+                    ><i>themoviedb.org </i></a
+                  >
+                  <em>You can check the website for more reference</em>
+                </p>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#request-get-movies-example-curl" data-toggle="tab"
+                      >Curl</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-get-movies-example-curl"
+                  >
+                    <pre><code class="hljs curl">curl -X GET "{{host}}:{{port}}/api/movie/search?title={{query}}"</code></pre>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a
+                      href="#request-get-movies-responses-b41dc001-2a7f-47f2-97fc-a311584fa950"
+                      data-toggle="tab"
+                    >
+                      Found
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a
+                      href="#request-get-movies-responses-feb7dc2d-cbff-4efe-971d-c0b828c4b6f5"
+                      data-toggle="tab"
+                    >
+                      Not found
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane active"
+                    id="request-get-movies-responses-b41dc001-2a7f-47f2-97fc-a311584fa950"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>200 OK</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>13922</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"3662-3vJXuuiqzY8XIt4phJyvlZRhcO8"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 12:53:29 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "page": 1,
+      "results": [
+          {
+              "adult": false,
+              "backdrop_path": "/2PDTWfuBWQKVC7aPAqJK5UCpz08.jpg",
+              "genre_ids": [
+                  28,
+                  878
+              ],
+              "id": 557,
+              "original_language": "en",
+              "original_title": "Spider-Man",
+              "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+              "popularity": 91.088,
+              "poster_path": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+              "release_date": "2002-05-01",
+              "title": "Spider-Man",
+              "video": false,
+              "vote_average": 7.3,
+              "vote_count": 18441
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878,
+                  18
+              ],
+              "id": 315635,
+              "original_language": "en",
+              "original_title": "Spider-Man: Homecoming",
+              "overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+              "popularity": 276.89,
+              "poster_path": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+              "release_date": "2017-07-05",
+              "title": "Spider-Man: Homecoming",
+              "video": false,
+              "vote_average": 7.337,
+              "vote_count": 21248
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
+              "genre_ids": [
+                  16,
+                  28,
+                  12,
+                  878
+              ],
+              "id": 569094,
+              "original_language": "en",
+              "original_title": "Spider-Man: Across the Spider-Verse",
+              "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+              "popularity": 160.389,
+              "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+              "release_date": "2023-05-31",
+              "title": "Spider-Man: Across the Spider-Verse",
+              "video": false,
+              "vote_average": 8.362,
+              "vote_count": 6310
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878
+              ],
+              "id": 634649,
+              "original_language": "en",
+              "original_title": "Spider-Man: No Way Home",
+              "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+              "popularity": 310.345,
+              "poster_path": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+              "release_date": "2021-12-15",
+              "title": "Spider-Man: No Way Home",
+              "video": false,
+              "vote_average": 7.967,
+              "vote_count": 19429
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/b9YkKJcW3pPaXgMZu9uoT7v9yRB.jpg",
+              "genre_ids": [
+                  16,
+                  28,
+                  12,
+                  878
+              ],
+              "id": 324857,
+              "original_language": "en",
+              "original_title": "Spider-Man: Into the Spider-Verse",
+              "overview": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \"Kingpin\" Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension.",
+              "popularity": 83.165,
+              "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+              "release_date": "2018-12-06",
+              "title": "Spider-Man: Into the Spider-Verse",
+              "video": false,
+              "vote_average": 8.403,
+              "vote_count": 15039
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/v5aFCLawM9oCygfGUzjJxRX4c6C.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878
+              ],
+              "id": 1930,
+              "original_language": "en",
+              "original_title": "The Amazing Spider-Man",
+              "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+              "popularity": 111.003,
+              "poster_path": "/BgcvtsVWLQfjHD6Dr3YYgeSLYk.jpg",
+              "release_date": "2012-06-23",
+              "title": "The Amazing Spider-Man",
+              "video": false,
+              "vote_average": 6.7,
+              "vote_count": 16902
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/a6lJwBf62zCmMQMunhAKimX7Mnp.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878
+              ],
+              "id": 559,
+              "original_language": "en",
+              "original_title": "Spider-Man 3",
+              "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+              "popularity": 77.262,
+              "poster_path": "/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
+              "release_date": "2007-05-01",
+              "title": "Spider-Man 3",
+              "video": false,
+              "vote_average": 6.417,
+              "vote_count": 13670
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/zlpZzccypkAYFZIyYLQcchl90ZC.jpg",
+              "genre_ids": [
+                  878,
+                  28,
+                  80,
+                  10770
+              ],
+              "id": 225914,
+              "original_language": "en",
+              "original_title": "Spider-Man",
+              "overview": "When an extortionist threatens to force a multi-suicide unless a huge ransom is paid, only Peter Parker can stop him with his new powers as Spider-Man.",
+              "popularity": 22.234,
+              "poster_path": "/jNxRHZ2cxVkNRtxgHuCtv7GY4JP.jpg",
+              "release_date": "1977-09-14",
+              "title": "Spider-Man",
+              "video": false,
+              "vote_average": 6.125,
+              "vote_count": 168
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/v0bRPfdW0uxoCIW8kOhsJThyoGB.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878
+              ],
+              "id": 102382,
+              "original_language": "en",
+              "original_title": "The Amazing Spider-Man 2",
+              "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+              "popularity": 71.676,
+              "poster_path": "/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
+              "release_date": "2014-04-16",
+              "title": "The Amazing Spider-Man 2",
+              "video": false,
+              "vote_average": 6.508,
+              "vote_count": 12843
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/34jW8LvjRplM8Pv06cBFDpLlenR.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878
+              ],
+              "id": 429617,
+              "original_language": "en",
+              "original_title": "Spider-Man: Far From Home",
+              "overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+              "popularity": 88.164,
+              "poster_path": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+              "release_date": "2019-06-28",
+              "title": "Spider-Man: Far From Home",
+              "video": false,
+              "vote_average": 7.428,
+              "vote_count": 15184
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/faV0HuR6WnQoLrVq3r6mhjaABL9.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  878
+              ],
+              "id": 558,
+              "original_language": "en",
+              "original_title": "Spider-Man 2",
+              "overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood. A certain anger begins to brew in his best friend Harry Osborn as well...",
+              "popularity": 30.412,
+              "poster_path": "/olxpyq9kJAZ2NU1siLshhhXEPR7.jpg",
+              "release_date": "2004-06-25",
+              "title": "Spider-Man 2",
+              "video": false,
+              "vote_average": 7.3,
+              "vote_count": 14675
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/46Br5afTklXva5gRI6wXcAApaGP.jpg",
+              "genre_ids": [
+                  16,
+                  28,
+                  12,
+                  878
+              ],
+              "id": 911916,
+              "original_language": "en",
+              "original_title": "Spider-Man: Beyond the Spider-Verse",
+              "overview": "Taking place right after the events of Spider-Man: Across the Spider-Verse, Gwen Stacy leads the newly reformed Spider-Gang in a race against the Spider-Society, led by Miguel O'Hara, to find Miles Morales, who is trapped in the home dimension of the spider that bit him, along with an alternate version of himself as the Prowler, while the Spot begins his deadly attack in his dimension with far-reaching multiversal consequences.",
+              "popularity": 23.398,
+              "poster_path": "/5cAuJOfd5tuuFBz2yQmBCtVBaj0.jpg",
+              "release_date": "",
+              "title": "Spider-Man: Beyond the Spider-Verse",
+              "video": false,
+              "vote_average": 0,
+              "vote_count": 0
+          },
+          {
+              "adult": false,
+              "backdrop_path": null,
+              "genre_ids": [
+                  878,
+                  28,
+                  12
+              ],
+              "id": 969681,
+              "original_language": "en",
+              "original_title": "Spider-Man 4",
+              "overview": "The next installment of the MCU Spider-Man franchise: a sequel to \"Spider-Man: No Way Home\" and the first in a possible new trilogy. Plot unknown.",
+              "popularity": 13.215,
+              "poster_path": null,
+              "release_date": "",
+              "title": "Spider-Man 4",
+              "video": false,
+              "vote_average": 0,
+              "vote_count": 0
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/8YTbDLjcIpCvBjiUa1yYFFUhwGX.jpg",
+              "genre_ids": [
+                  99,
+                  80
+              ],
+              "id": 1183166,
+              "original_language": "fr",
+              "original_title": "Vjeran Tomic: L'homme-araignée de Paris",
+              "overview": "In his own words, the burglar behind the 2010 robbery of the Paris Museum of Modern Art tells how he pulled off the biggest art heist in French history.",
+              "popularity": 10.936,
+              "poster_path": "/sv0Pzq9Kdv3NBZNdKnEu9xOdcT4.jpg",
+              "release_date": "2023-10-20",
+              "title": "Vjeran Tomic: The Spider-Man of Paris",
+              "video": false,
+              "vote_average": 7,
+              "vote_count": 49
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/tObVe1R7JnO3VXBvAOWTEPmmegu.jpg",
+              "genre_ids": [
+                  99
+              ],
+              "id": 961651,
+              "original_language": "en",
+              "original_title": "Spider-Man: All Roads Lead to No Way Home",
+              "overview": "Join our hosts JB Smoove and Martin Starr for a celebration of 20 years of Spider-Man™ movies!  From the original Sam Raimi trilogy to Marc Webb’s “amazing” movies to the latest trio from Director Jon Watts, we will take viewers through the stars, the stunts and action, the villains and heroes and an homage to Stan Lee, along with a few surprises. Find your favourite Spider-Man pajamas and prepare to swing through the past two decades of Spider-Man at the movies!",
+              "popularity": 23.67,
+              "poster_path": "/e2LLmI5wKIrWGAy9Of3yyWu7Szn.jpg",
+              "release_date": "2022-05-03",
+              "title": "Spider-Man: All Roads Lead to No Way Home",
+              "video": false,
+              "vote_average": 6.757,
+              "vote_count": 68
+          },
+          {
+              "adult": false,
+              "backdrop_path": null,
+              "genre_ids": [
+                  28,
+                  878
+              ],
+              "id": 445033,
+              "original_language": "en",
+              "original_title": "Spider-Man",
+              "overview": "Spider-man must rescue the beautiful daughter of the evil Dr. Lightning.",
+              "popularity": 7.453,
+              "poster_path": "/iYBfBk1i9zjN9Vybbj8UgTYzkyv.jpg",
+              "release_date": "1969-01-01",
+              "title": "Spider-Man",
+              "video": false,
+              "vote_average": 6.667,
+              "vote_count": 27
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/aKEINUeg3y324PxOwZfwM0uWmk7.jpg",
+              "genre_ids": [
+                  28,
+                  12,
+                  10751,
+                  14,
+                  10770
+              ],
+              "id": 225925,
+              "original_language": "en",
+              "original_title": "Spider-Man Strikes Back",
+              "overview": "At the New York State University, one of Peter Parker's tutors has accidentally given three students all the materials they need to create an atomic bomb. While Peter Parker tries to find out what's happened, the police suspect him of the crime, and Peter has to deal with an attractive journalist determined to get an interview with Spider-Man. Then dastardly millionaire Mr. White shows up, and will stop at nothing to get his hands on the atomic bomb. Spider-Man must defeat this scheming villain and stop him blowing up the World Trade Centre.",
+              "popularity": 12.775,
+              "poster_path": "/mwRss4cA5m4fH6izoTwwPfF3ZOU.jpg",
+              "release_date": "1978-12-21",
+              "title": "Spider-Man Strikes Back",
+              "video": false,
+              "vote_average": 5.738,
+              "vote_count": 65
+          },
+          {
+              "adult": false,
+              "backdrop_path": null,
+              "genre_ids": [
+                  16
+              ],
+              "id": 50410,
+              "original_language": "en",
+              "original_title": "Spider-Man: The Venom Saga",
+              "overview": "A space-shuttle crash-landing puts the famous web-slinger Spider-Man in contact with a living alien substance that bonds to his suit and enhances his super-powers. Unfortunately, the alien substance begins to change him and he feels the pull of evil, so discards the suit. The evil attaches itself to another host leading to an epic confrontation between good and evil.",
+              "popularity": 12.34,
+              "poster_path": "/vvYt1CDagCKMrolohME0o15GPZ3.jpg",
+              "release_date": "2005-06-07",
+              "title": "Spider-Man: The Venom Saga",
+              "video": true,
+              "vote_average": 6.794,
+              "vote_count": 80
+          },
+          {
+              "adult": false,
+              "backdrop_path": "/bywThfrqhK4PUPMPhkrkDAKF0yd.jpg",
+              "genre_ids": [
+                  99,
+                  10770
+              ],
+              "id": 228088,
+              "original_language": "fr",
+              "original_title": "De Superman à Spider-Man: L'aventure des super-héros",
+              "overview": "The historical saga of American superheroes. Born in the period between the Great Depression and the World War II to combat the hobgoblins of the modern world, these mutant human beings with superhuman powers colonized the funny papers, radio dramas, television and films, to become a truly national industry in the United States: they gave expression to the fears and obsessions of the twentieth century and bolstered American ideals.",
+              "popularity": 11.031,
+              "poster_path": "/b6760qS8pEb3elWp4e7KPQsGliC.jpg",
+              "release_date": "2001-12-23",
+              "title": "Once Upon a Time: The Super Heroes",
+              "video": false,
+              "vote_average": 7.039,
+              "vote_count": 38
+          },
+          {
+              "adult": false,
+              "backdrop_path": null,
+              "genre_ids": [
+                  18
+              ],
+              "id": 148918,
+              "original_language": "ro",
+              "original_title": "Superman, Spider-Man sau Batman",
+              "overview": "Aron, a 5-year-old boy, sets together with his worried father on a journey at the end of which he wishes, like the superheroes in the comic books, to save his mother suffering from a heart condition.",
+              "popularity": 1.905,
+              "poster_path": "/iUp85s5s7eaPbuCUNqOCeJCEVpY.jpg",
+              "release_date": "2011-06-01",
+              "title": "Superman, Spider-Man or Batman",
+              "video": false,
+              "vote_average": 6.925,
+              "vote_count": 20
+          }
+      ],
+      "total_pages": 4,
+      "total_results": 76
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div
+                    class="tab-pane"
+                    id="request-get-movies-responses-feb7dc2d-cbff-4efe-971d-c0b828c4b6f5"
+                  >
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 20%">Status</th>
+                        <td>404 Not Found</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">X-Powered-By</th>
+                        <td>Express</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Type</th>
+                        <td>application/json; charset=utf-8</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Content-Length</th>
+                        <td>57</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">ETag</th>
+                        <td>W/"39-+87p5NBWOt0M2gedzIZFMQjwnZg"</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Date</th>
+                        <td>Fri, 31 May 2024 12:52:39 GMT</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Connection</th>
+                        <td>keep-alive</td>
+                      </tr>
+
+                      <tr>
+                        <th style="width: 20%">Keep-Alive</th>
+                        <td>timeout=5</td>
+                      </tr>
+
+                      <tr>
+                        <td class="response-text-sample" colspan="2">
+                          <pre><code>{
+      "page": 1,
+      "results": [],
+      "total_pages": 1,
+      "total_results": 0
+  }</code></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("table:not(.table)").addClass("table table-bordered");
+      });
+    </script>
+  </body>
+</html>
