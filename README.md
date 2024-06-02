@@ -30,7 +30,7 @@ _Shoutout to [aubm](https://github.com/aubm) and any of the contributors for cre
 
 _NOTICE: THIS APP REQUIRES AN ACTIVE INTERNET CONNECTION_
 
-1. Install [Node.js](https://nodejs.org/en/download), [PostgreSQL](https://www.postgresql.org/download), and [git](https://www.git-scm.com/downloads) _(optional, you can also download this repo then extract it manually instead of cloning it)_
+1. Install [Node.js](https://nodejs.org/en/download), [PostgreSQL](https://www.postgresql.org/download), and [git](https://www.git-scm.com/downloads) _(optional, you can also download this repo then extract it manually instead of cloning it in step 2)_
    - for `PostgreSQL`, you must remember your configuration before proceeding to the next step since it will be used in the step 5
 2. Open a terminal then run `git clone https://github.com/imfauzan14/24001157-44-IMF-REVIEWIN-GOLD`
 3. Run `cd 24001157-44-IMF-REVIEWIN-GOLD`
