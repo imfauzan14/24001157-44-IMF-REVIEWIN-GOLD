@@ -1,7 +1,8 @@
 # review-in
 
-A really simple web app for movie reviews
-<br> _This web app is part of my challenge submission for a bootcamp I'm currently enrolling in_
+A really simple web app for movie reviews.
+<br> _This web app is part of my challenge submission for a bootcamp I'm currently enrolling in._
+<br> _[frontend-showcase-video here](https://raw.github.com/imfauzan14/24001157-44-IMF-REVIEWIN-GOLD/main/docs/frontend-showcase.mp4)_
 <br>
 
 ## App Features
