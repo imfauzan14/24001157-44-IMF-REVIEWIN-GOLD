@@ -21,7 +21,7 @@ A really simple web app for movie reviews
    - Redirect to 404 Not Found Page if the movieId can't be found
 6. API Documentation Page
    - Detailed Explanation of each available API on this web app
-     <br>_i've also provided the [postman_collection.json](https://github.com/imfauzan14/review-in/blob/main/docs/postman_collection.json) and [postman documenter](https://documenter.getpostman.com/view/23290974/2sA3Qwbpeb) so you can import it to your [Postman](https://www.postman.com/)_
+     <br>_i've also provided the [postman_collection.json](https://github.com/imfauzan14/24001157-44-IMF-REVIEWIN-GOLD/blob/main/docs/postman_collection.json) and [postman documenter](https://documenter.getpostman.com/view/23290974/2sA3Qwbpeb) so you can import it to your [Postman](https://www.postman.com/)_
 7. Some kind of "variable checker" for each variable (although maybe not every variable) interacted with this app
 
 _Shoutout to [aubm](https://github.com/aubm) and any of the contributors for creating [postmanerator](https://github.com/aubm/postmanerator)! , it saved me big time to generate HTML for my Postman API Documentation Page_
@@ -32,8 +32,8 @@ _NOTICE: THIS APP REQUIRES AN ACTIVE INTERNET CONNECTION_
 
 1. Install [Node.js](https://nodejs.org/en/download), [PostgreSQL](https://www.postgresql.org/download), and [git](https://www.git-scm.com/downloads) _(optional, you can also download this repo then extract it manually instead of cloning it)_
    - for `PostgreSQL`, you must remember your configuration before proceeding to the next step since it will be used in the step 5
-2. Open a terminal then run `git clone https://github.com/imfauzan14/review-in`
-3. Mount the terminal to the new folder that you've just cloned
+2. Open a terminal then run `git clone https://github.com/imfauzan14/24001157-44-IMF-REVIEWIN-GOLD`
+3. Run `cd 24001157-44-IMF-REVIEWIN-GOLD`
 4. Run `npm i`
 5. Open the `.env` file using any text editor app and customize it based on your preference
    - for the `DB_AUTO_SETUP` , you can set it to `false` if you don't want the app to generate the database automatically by using its latest migration, this means that you need to setup the database table manually by following the format written in `./database/migrations/20240526051242_create_empty_tables.js`
