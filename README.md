@@ -22,7 +22,6 @@ A really simple web app for movie reviews
 6. API Documentation Page
    - Detailed Explanation of each available API on this web app
      <br>_i've also provided the [postman_collection.json](https://github.com/imfauzan14/24001157-44-IMF-REVIEWIN-GOLD/blob/main/docs/postman_collection.json) and [postman documenter](https://documenter.getpostman.com/view/23290974/2sA3Qwbpeb) so you can import it to your [Postman](https://www.postman.com/)_
-7. Some kind of "variable checker" for each variable (although maybe not every variable) interacted with this app
 
 _Shoutout to [aubm](https://github.com/aubm) and any of the contributors for creating [postmanerator](https://github.com/aubm/postmanerator)! , it saved me big time to generate HTML for my Postman API Documentation Page_
 
@@ -38,6 +37,6 @@ _NOTICE: THIS APP REQUIRES AN ACTIVE INTERNET CONNECTION_
 5. Open the `.env` file using any text editor app and customize it based on your preference
    - for the `DB_AUTO_SETUP` , you can set it to `false` if you don't want the app to generate the database automatically by using its latest migration, this means that you need to setup the database table manually by following the format written in `./database/migrations/20240526051242_create_empty_tables.js`
    - for the `MOVIEDB_ACCESS_TOKEN`, you can get it from [themoviedb](https://www.themoviedb.org/settings/api)
-     <br> _for bootcamp facilitator, i've sent you my `MOVIEDB_ACCESS_TOKEN through` whatsapp DM so you may use that instead_
+     <br> _for bootcamp facilitator, the source code in form of a .zip file i've submitted through the bootcamp web should've the MOVIEDB_ACCESS_TOKEN included in it already, although i've also sent you my `MOVIEDB_ACCESS_TOKEN` through whatsapp DM so you may use that too_
 6. Run `npm start` or `npm run dev` for development mode using [nodemon](https://nodemon.io)
 7. The web app address should be appeared on your terminal log, you can open it by using a browser
