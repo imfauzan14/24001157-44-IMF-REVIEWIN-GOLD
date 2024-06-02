@@ -38,6 +38,6 @@ _NOTICE: THIS APP REQUIRES AN ACTIVE INTERNET CONNECTION_
 5. Open the `.env` file using any text editor app and customize it based on your preference
    - for the `DB_AUTO_SETUP` , you can set it to `false` if you don't want the app to generate the database automatically by using its latest migration, this means that you need to setup the database table manually by following the format written in `./database/migrations/20240526051242_create_empty_tables.js`
    - for the `MOVIEDB_ACCESS_TOKEN`, you can get it from [themoviedb](https://www.themoviedb.org/settings/api)
-     <br> _for bootcamp facilitator, i've sent you my MOVIEDB_ACCESS_TOKEN through whatsapp DM so you may use that instead_
+     <br> _for bootcamp facilitator, i've sent you my `MOVIEDB_ACCESS_TOKEN through` whatsapp DM so you may use that instead_
 6. Run `npm start` or `npm run dev` for development mode using [nodemon](https://nodemon.io)
 7. The web app address should be appeared on your terminal log, you can open it by using a browser
