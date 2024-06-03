@@ -9,18 +9,20 @@ A really simple web app for movie reviews.
 
 1. Using Responsive Web Design
 2. REST API
-3. Initial Page:
+3. Status Code Middleware
+   - for now it's only accessible when you put a wrong movieId params in the url, i'm still figuring it out the better way to implement it to be somewhat dynamic
+5. Initial Page:
    - Search bar for movies
    - API Documentation button (upper-left corner)
-4. Movies Page
+6. Movies Page
    - Movies card catalogue
      <br>_it'll show `"NO RESULTS FOUND..."` instead of an empty page when the movie can't be found_
-5. Reviews Page
+7. Reviews Page
    - Movie details
    - Reviews (CREATE review, READ reviews, , UPDATE review rating, DELETE review)
      <br>_if there's no review, the review list will show `"No Reviews Yet!"`_
    - Redirect to 404 Not Found Page if the movieId can't be found
-6. API Documentation Page
+8. API Documentation Page
    - Detailed Explanation of each available API on this web app
      <br>_i've also provided the [postman_collection.json](https://github.com/imfauzan14/24001157-44-IMF-REVIEWIN-GOLD/blob/main/docs/postman_collection.json) and [postman documenter](https://documenter.getpostman.com/view/23290974/2sA3Qwbpeb) so you can import it to your [Postman](https://www.postman.com/)_
 
