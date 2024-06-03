@@ -9,7 +9,7 @@ A really simple web app for movie reviews.
 
 1. Using Responsive Web Design
 2. REST API
-3. Status Code Middleware
+3. Status Code Middleware that returns a HTML page alongside its code and message details
    - for now it's only accessible when you put a wrong movieId params in the url, i'm still figuring it out the better way to implement it to be somewhat dynamic
 5. Initial Page:
    - Search bar for movies
